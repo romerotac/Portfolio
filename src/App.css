@@ -1,5 +1,6 @@
 *{
   height: 100%;
+  margin: 0%;
 }
 body{
   background: #3A3A42;
@@ -9,12 +10,12 @@ body{
 .menu{
   position: fixed;
   height: 100vh;
-  background: aqua;
+  background: rgb(24, 221, 221);
   background-image: url('./Images/arrow.png');
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  
+  cursor: pointer;
 
   width: 10vw;
   box-shadow: 1px 0 2px rgba(0,0,0,.2);
@@ -23,14 +24,24 @@ body{
 .menu:hover{
   width: 40vw;
   background-image: none;
-  
-  
 }
 
 .menu:hover ~ .container{
   transform: perspective(80vw) rotateY(10deg) translateX(35vw) scaleY(1.2);
   
 }
+
+.menu:hover ~ .container .content .home-body{
+  color: #beb8b8;
+  transition: 1s;
+}
+
+.menu:hover ~ .container .content .home-body span{
+  color: rgb(139, 226, 226);
+  transition: 1s;
+}
+
+
 
 .menu:hover .nav{
   left: 20%;
@@ -77,3 +88,53 @@ body{
   padding: 100px 20%;
   height: auto;
 }
+
+
+.container .content .home-body {
+  color: rgb(82, 73, 73);
+}
+
+.container .content .home-body span{
+  color: rgb(24, 221, 221);
+}
+
+
+@media screen and (max-width:360px) {
+
+  .menu{
+    width: 20vw;
+  }
+
+  .container{
+    margin-left: 20vw;
+  }
+
+  .menu:hover .nav{
+    left: 10%;
+  }
+
+  .menu:hover{
+    width: 50vw;
+    background-image: none;
+   
+  }
+
+  .menu:hover ~ .container{
+    transform: perspective(80vw) rotateY(10deg) translateX(40vw) scaleY(1.2);
+    
+  }
+  .nav {
+    position: absolute;
+    margin-top: 100%;
+    left: -1000px;
+    transition: .5s;
+  }
+  .nav ul li {
+    letter-spacing: .1em;
+  }
+
+  .nav ul{
+    padding: unset;
+  }
+}
+
