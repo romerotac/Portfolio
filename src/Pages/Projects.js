@@ -5,8 +5,30 @@ function Projects() {
     return (
       <div className='container'>
         <div className='content'>
-        <h1> This is the Projects page</h1> 
-         </div>
+        <div className='projects-body'>
+          <h1> My Projects</h1>
+          <div className='grid-container'>
+            <div className='grid-item'>
+              <a href=''></a>
+            </div>
+            <div className='grid-item'>
+              <a href=''></a>
+            </div>
+            <div className='grid-item'>
+              <a href=''></a>
+            </div>
+            <div className='grid-item'>
+              <a href=''></a>
+            </div>
+            <div className='grid-item'>
+              <a href=''></a>
+            </div>
+            <div className='grid-item'>
+              <a href=''></a>
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
     );
   }

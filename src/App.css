@@ -1,5 +1,5 @@
 *{
-  height: 100%;
+  height: -webkit-fill-available;
   margin: 0%;
 }
 body{
@@ -10,7 +10,7 @@ body{
 .menu{
   position: fixed;
   height: 100vh;
-  background: rgb(24, 221, 221);
+  background:#107A8A;
   background-image: url('./Images/arrow.png');
   background-size: 50%;
   background-repeat: no-repeat;
@@ -31,13 +31,14 @@ body{
   
 }
 
-.menu:hover ~ .container .content .home-body{
+.menu:hover ~ .container .content {
   color: #beb8b8;
   transition: 1s;
 }
 
 .menu:hover ~ .container .content .home-body span{
   color: rgb(139, 226, 226);
+  text-shadow: 0 0 2px rgb(29, 179, 216), 3px 5px #e4e2e2;
   transition: 1s;
 }
 
@@ -45,16 +46,21 @@ body{
 
 .menu:hover .nav{
   left: 20%;
-  
+  height: fit-content;
 }
 
 .container{
   width: 90%;
   margin-left: 10vw;
-  background-color: aliceblue;
+  background-image: url("./Images/Walpaper1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   transition: 1s;
   transform-origin: left center;
   color: #D2D2D0;
+  height: inherit;
 }
 
 .nav {
@@ -86,20 +92,218 @@ body{
 
 .container .content{
   padding: 100px 20%;
-  height: auto;
-}
-
-
-.container .content .home-body {
+  position: relative;
+  height: -webkit-fill-available;
   color: rgb(82, 73, 73);
 }
 
+.container .content .home-body{
+  position: absolute;
+  top: 25%;
+  left: 2%;
+  height: auto;
+  padding: inherit;
+  font-size: 20px;
+}
+
 .container .content .home-body span{
-  color: rgb(24, 221, 221);
+  color: #107A8A;
+  text-shadow: 0 0 2px rgb(16 148 148), 5px 6px #bce4d8;
 }
 
 
-@media screen and (max-width:360px) {
+.container .content .about-body{
+  position: absolute;
+  top: 18%;
+  left: 2%;
+  right: 2%;
+  height: auto;
+  padding: inherit;
+}
+
+.container .content h1{
+  display: contents;
+}
+.container .content .about-body p{
+  padding-top: 2%;
+}
+
+.container .content .projects-body .grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+    /* background-color: #3A3A42; */
+  padding: 4%;
+  grid-gap: 4%;
+  max-height: 75%;
+}
+
+.container .content .projects-body .grid-container .grid-item{
+  background-color: #bcbcbc;
+  border-radius: 3%;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  box-shadow:5px 6px darkgrey;
+  cursor: pointer;
+}
+
+
+.container .content .contact-body .form-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+
+  height: auto;
+  background-color: #107A8A;
+  border-radius: 1%;
+  box-shadow: 5px 6px darkgrey;
+}
+
+.container .content .contact-body .form-container form{
+ width: 45%;
+ font-weight: 500;
+ color:white ; 
+}
+
+.container .content .contact-body .form-container form .form-control{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.container .content .contact-body .form-container form .field{
+  display: contents;
+}
+
+.container .content .contact-body .form-container form .form-control, textarea{
+  max-width: 400px;
+    background-color: #fff3f3;
+    color: rgb(82, 73, 73);
+    letter-spacing: 1px;
+}
+
+.container .content .contact-body .form-container form .form-control, textarea.form-control{
+  height: auto;
+}
+
+.container .content .contact-body .form-container form button{
+  width:25vw;
+  margin-top: 7%;
+  padding: 3%;
+  border-radius: 4px;
+  border: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background-color: black;
+  box-shadow: inset 0 0 0 0 black;
+  transition: ease-out 0.3s;
+  border-color:black;
+}
+
+.container .content .contact-body .form-container form button:hover{
+  color: #107A8A;
+  box-shadow: inset 26vw 0 0 0 white;
+}
+
+.container .content .contact-body .form-container .left-form{
+  align-self: center;
+  padding: inherit;
+}
+
+.container .content .contact-body .form-container .left-field {
+  max-width: 400px;
+  font-weight: 500;
+  color: white;
+  padding-bottom: 2vw;
+}
+
+.container .content .contact-body .form-container .left-field ul{
+list-style-type: none;
+margin-left: -30px;
+padding-right: 20px;
+}
+.container .content .contact-body .form-container .left-field ul li{
+line-height: 3;
+}
+.container .content .contact-body .form-container .left-field ul li svg{
+  color: black;
+  font-size: 1em;
+}
+
+.container .content .contact-body .form-container .left-field ul li span{
+  padding-left: 1em;
+  }
+
+.container .content .contact-body .form-container .field{
+  margin: 12px 0px;
+}
+
+.container .content .contact-body .form-container .left-form hr{
+  border: 1px solid black;
+  height: fit-content;
+}
+
+.container .content .contact-body .form-container .social-field{
+  padding-top:2vw;
+}
+
+.container .content .contact-body .form-container .social-field ul{
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+.container .content .contact-body .form-container .social-field li{
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 10px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+.container .content .contact-body .form-container .social-field li a{
+  color: white;
+}
+
+
+.container .content .contact-body .form-container .social-field li:hover{
+  background-color: white;
+  transition: 1s;
+}
+
+.container .content .contact-body .form-container .social-field li:hover .github{
+  color: #3A3A42;
+  transition: 1s;
+}
+.container .content .contact-body .form-container .social-field li:hover .linkedin{
+  color: #107A8A;
+  transition: 1s;
+}
+.container .content .contact-body .form-container .social-field li:hover .pdf{
+  color: darkred;
+  transition: 1s;
+}
+
+@media screen and (max-width:414px) {
 
   .menu{
     width: 20vw;
@@ -136,5 +340,13 @@ body{
   .nav ul{
     padding: unset;
   }
+
+  .container .content .home-body{
+    top: 10%;
+    left: 2%;
+    font-size: 15px;
+  }
+
+  
 }
 
