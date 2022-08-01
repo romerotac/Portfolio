@@ -7,6 +7,69 @@ body{
   box-sizing: content-box;
 }
 
+.modal{
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom:0%;
+  background-color: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.modal-content{
+  width: 340px;
+  height: 210px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8%;
+  border-radius: 5px;
+  
+}
+
+.modal-header{
+  background-image: url("./Images/checkfin.png");
+  background-size: cover;
+  background-position: center;
+  width: 12%;
+  margin-top: 10px;
+}
+
+.modal-header, .modal-footer{
+  padding: 10px;
+  align-self: center;
+}
+
+.modal-footer button{
+  height: 35px;
+  width: 90px;
+  font-weight: bold;
+  color: white;
+  background-color: #107A8A;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-title{
+  margin: 0%;
+  
+}
+
+.modal-body{
+  padding: 10px;
+  align-self: center;
+  margin-top: 13px;
+  color: black;
+}
+
+.modal-body h1{
+  font-size: inherit;
+}
 .menu{
   position: fixed;
   height: 100vh;
@@ -39,10 +102,29 @@ body{
 .menu:hover ~ .container .content .home-body span{
   color: rgb(139, 226, 226);
   text-shadow: 0 0 2px rgb(29, 179, 216), 3px 5px #e4e2e2;
-  transition: 1s;
+  
 }
 
+.menu:hover ~ .container .content .form-container{
+  background-color:#64c1cfd3 ;
+ 
+}
 
+.menu:hover ~ .container .content .form-container form .button-submit{
+  background-color: #beb8b8;
+}
+
+.menu:hover ~ .container .content .contact-body .form-container .left-form hr {
+  border: 1px solid #beb8b8;
+}
+
+.menu:hover ~ .container .content .contact-body .form-container .left-form .social-field li {
+  background-color: #beb8b8;
+}
+
+.menu:hover ~ .container .content .contact-body .form-container .left-field ul li svg {
+  color: #beb8b8;
+}
 
 .menu:hover .nav{
   left: 20%;
@@ -83,6 +165,11 @@ body{
   padding: 3%;
 }
 
+.nav ul li a:hover {
+  color: #3A3A42;
+  transform: 1s;
+}
+
 .nav ul li a {
   font-size: 30px;
   text-decoration: none;
@@ -94,7 +181,8 @@ body{
   padding: 100px 20%;
   position: relative;
   height: -webkit-fill-available;
-  color: rgb(82, 73, 73);
+  color: black;
+  overflow: auto;
 }
 
 .container .content .home-body{
@@ -122,8 +210,11 @@ body{
 }
 
 .container .content h1{
-  display: contents;
+  height: auto;
+  padding-bottom: 1vw;
+      /* display: contents; */
 }
+
 .container .content .about-body p{
   padding-top: 2%;
 }
@@ -147,6 +238,9 @@ body{
   cursor: pointer;
 }
 
+.container .content .contact-body{
+  height: auto;
+}
 
 .container .content .contact-body .form-container{
   display: flex;
@@ -184,7 +278,7 @@ body{
 }
 
 .container .content .contact-body .form-container form .form-control, textarea{
-  max-width: 400px;
+    /*max-width: 400px;*/
     background-color: #fff3f3;
     color: rgb(82, 73, 73);
     letter-spacing: 1px;
@@ -194,10 +288,10 @@ body{
   height: auto;
 }
 
-.container .content .contact-body .form-container form button{
-  width:25vw;
+.container .content .contact-body .form-container form .button-submit{
+  width:108%;
   margin-top: 7%;
-  padding: 3%;
+  padding: 12px;
   border-radius: 4px;
   border: none;
   font-family: sans-serif;
@@ -210,9 +304,9 @@ body{
   border-color:black;
 }
 
-.container .content .contact-body .form-container form button:hover{
+.container .content .contact-body .form-container form .button-submit:hover{
   color: #107A8A;
-  box-shadow: inset 26vw 0 0 0 white;
+  box-shadow: inset 41vw 0 0 0 white;
 }
 
 .container .content .contact-body .form-container .left-form{
@@ -250,7 +344,7 @@ line-height: 3;
 
 .container .content .contact-body .form-container .left-form hr{
   border: 1px solid black;
-  height: fit-content;
+  
 }
 
 .container .content .contact-body .form-container .social-field{
@@ -303,7 +397,7 @@ line-height: 3;
   transition: 1s;
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:430px) {
 
   .menu{
     width: 20vw;
@@ -312,6 +406,15 @@ line-height: 3;
   .container{
     margin-left: 20vw;
   }
+
+  .container .content{
+    padding: 100px 15%;
+  }
+
+  .container .content .contact-body .form-container .left-field ul li span {
+    font-size: small;
+  }
+  
 
   .menu:hover .nav{
     left: 10%;
@@ -350,3 +453,69 @@ line-height: 3;
   
 }
 
+@media screen and  (max-width: 1400px) {
+
+  .container .content .contact-body .form-container {
+    flex-direction: column;
+
+    height: fit-content;
+  }
+  
+  .container .content .contact-body .form-container form .form-control, textarea.form-control {
+    height: 30px;
+  }
+
+  .container .content .contact-body .form-container form {
+    align-self: center;
+    padding-right: 22px;
+    width: 75%;
+  }
+
+
+  .container .content .contact-body .form-container .social-field {
+    padding-top: 0%;
+  }
+
+  .container .content .contact-body .form-container .left-field {
+    padding-bottom: 0%;
+  }
+}
+
+@media screen and (max-width:760px) {
+
+  
+
+  .container .content .contact-body .form-container .social-field li {
+    display: table;
+  }
+
+  .container .content .contact-body .form-container .social-field ul{
+    text-align: -webkit-center;
+  }
+
+  .container .content .contact-body .form-container .left-form hr {
+    
+    margin-left: 40px;
+    margin-right: 40px;
+    
+  }
+
+  .container .content .contact-body .form-container .left-field ul li {
+    display: grid;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .container .content .contact-body .form-container .left-field ul li svg{
+    place-self: center;
+    font-size: 2em;
+  }
+
+  .container .content .contact-body .form-container .left-field ul li span{
+    place-self: center;
+    padding-left: 0;
+  } 
+  
+
+ 
+}
