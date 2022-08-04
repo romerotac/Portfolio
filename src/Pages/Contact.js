@@ -28,10 +28,13 @@ function Contact() {
 
       const form = useRef();
 
+      /*
+      function for trying the modal without sending the email
       const messsage = (e) => {
         e.preventDefault();
         setShow(true)
       }
+      **/
 
       const sendEmail = (e) =>{
         e.preventDefault();
@@ -70,18 +73,18 @@ function Contact() {
         <h1> Contact me </h1>
         <div className='form-container'>
         
-        <form ref={form} onSubmit={messsage}>
+        <form ref={form} onSubmit={sendEmail}>
 
             <div className='field'>
-            <label for="name">Name:</label><br/>
+            <label htmlFor="name">Name:</label><br/>
             <input type={"text"} value = {nameUser} onChange={(e) => setNameUser(e.target.value)} name = "user_name" placeholder='e.g Jhon Doe' className='form-control'  required></input>
             </div>
             <div className='field'>
-            <label for="email" >Email:</label><br/>
+            <label htmlFor="email" >Email:</label><br/>
             <input type={"email"} value = {emailUser} onChange={(e) => setEmailUser(e.target.value)} name = "user_email" placeholder='example@email.com' className='form-control' required></input>
             </div>
             <div className='field'>
-            <label for="message">Your Message:</label><br/>
+            <label htmlFor="message">Your Message:</label><br/>
             <textarea name='message' value={textUser} onChange={(e) => setTextUser(e.target.value)} placeholder='type here' className='form-control' rows="10" required></textarea>
             </div>
             

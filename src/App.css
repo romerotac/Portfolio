@@ -70,6 +70,8 @@ body{
 .modal-body h1{
   font-size: inherit;
 }
+
+
 .menu{
   position: fixed;
   height: 100vh;
@@ -87,6 +89,7 @@ body{
 .menu:hover{
   width: 40vw;
   background-image: none;
+  height: inherit;
 }
 
 .menu:hover ~ .container{
@@ -147,7 +150,7 @@ body{
 
 .nav {
   position: absolute;
-  margin-top: 50%;
+  margin-top: 36vh;
   left: -1000px;
   transition: .5s;
 }
@@ -192,6 +195,10 @@ body{
   height: auto;
   padding: inherit;
   font-size: 20px;
+}
+
+.container .content .about-body p{
+  font-size: 2vh;
 }
 
 .container .content .home-body span{
@@ -397,8 +404,9 @@ line-height: 3;
   transition: 1s;
 }
 
-@media screen and (max-width:430px) {
+@media screen and (max-width:604px) {
 
+  /*
   .menu{
     width: 20vw;
   }
@@ -410,18 +418,29 @@ line-height: 3;
   .container .content{
     padding: 100px 15%;
   }
+*/
 
+.container .content .about-body {
+  top: 10%;
+}
+
+.container .content .contact-body {
+  margin: -15%;
+}
   .container .content .contact-body .form-container .left-field ul li span {
     font-size: small;
   }
   
+  .nav ul li a {
+    font-size: 20px;
+  }
 
   .menu:hover .nav{
     left: 10%;
   }
 
   .menu:hover{
-    width: 50vw;
+    
     background-image: none;
    
   }
@@ -432,7 +451,6 @@ line-height: 3;
   }
   .nav {
     position: absolute;
-    margin-top: 100%;
     left: -1000px;
     transition: .5s;
   }
@@ -449,6 +467,8 @@ line-height: 3;
     left: 2%;
     font-size: 15px;
   }
+
+  
 
   
 }
@@ -481,9 +501,15 @@ line-height: 3;
   }
 }
 
+
+
+
+
 @media screen and (max-width:760px) {
 
-  
+  .menu:hover .nav {
+    left: 5%;
+  }
 
   .container .content .contact-body .form-container .social-field li {
     display: table;
@@ -516,6 +542,5 @@ line-height: 3;
     padding-left: 0;
   } 
   
-
  
 }
