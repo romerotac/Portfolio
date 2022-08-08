@@ -27,7 +27,7 @@ body{
 .modalProject-content{
   width: 80%;
   height:fit-content;
-  background-color: #fff;
+  background-color: #3A3A42;;
   display: flex;
   flex-direction: column;
   margin-left: 8%;
@@ -35,20 +35,20 @@ body{
 }
 
 .modalProject-header{
-  
   height: fit-content;
   text-align: end;
 }
 
 .modalProject-header .button-close{
   height: 30px;
-    width: 30px;
-    margin: 10px;
-    color: black;
-    background-color: red;
-    border-radius: 4px;
-    border-style: solid;
-    border-color: black;
+  width: 30px;
+  margin: 10px;
+  color: black;
+  background-color: red;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
 }
 
 .modalProject-footer{
@@ -67,6 +67,15 @@ body{
   cursor: pointer;
 }
 
+.image-carousel{
+  height: inherit;
+  width: 400px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #3A3A42;
+}
+
 .modalProject-body{
   display: flex;
   flex-wrap: wrap;
@@ -81,8 +90,8 @@ body{
 }
 
 .modalProject-body .left .modal-image-position{
-  height: 250px;
-
+  height: inherit;
+  width: 400px;
 }
 
 .modalProject-body .right{
@@ -343,11 +352,6 @@ body{
   text-align: center;
   box-shadow:5px 6px darkgrey;
   border-radius: 3%;
-  
-  background-image: url("./Images/empty_project.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 
@@ -456,8 +460,14 @@ body{
   text-align: center;
   box-shadow:5px 6px darkgrey;
   border-radius: 3%;
-}
 
+ 
+}
+.container .content .projects-body .grid-container img{
+  height: 200px;
+  width: 200px;
+  text-align: center;
+}
 .container .content .projects-body .grid-container .grid-item3 {
   background-color: blueviolet;
   color: black;
@@ -765,6 +775,7 @@ line-height: 3;
 
   .modalProject-body{
     flex-direction: column;
+    
   }
 
 

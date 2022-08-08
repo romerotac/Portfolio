@@ -1,8 +1,12 @@
 import React from 'react'
-import {AiFillHtml5} from 'react-icons/ai';
-import {FaCss3Alt,FaReact} from 'react-icons/fa';
 import Carousel from './Carousel';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Information from './Information';
 
+/*
+ maybe blue: #385f70
+**/
 
 function ModalProject(props) {
 
@@ -12,7 +16,8 @@ function ModalProject(props) {
 
     return(
         <>
-        <div className='modal'>
+        
+        <div className='modal' key={props.id}>
             <div className='modalProject-content'>
                 <div className='modalProject-header'>
                     <button className='button-close' onClick={props.onClose}>X</button>
@@ -21,30 +26,25 @@ function ModalProject(props) {
                     
                     <div className='left'>
                     <div className='modal-image-position'>
-                        <img src={require('../Images/empty_project.jpg')}></img>
+                        <Carousel images={Information[(props.id)-1].images}/>
                     </div>
                     </div>
                     
                     <div className='right'>
 
                     <div className='modal-content-position'>
-                    <h1>Topic of the project</h1>
-                    <p>this is a project created for the porpuse of being created for this particular project</p>
+                    <h1>{Information[(props.id)-1].title}</h1>
+                    <p>{Information[(props.id)-1].description}</p>
                     </div>
 
                     <div className='languages-section'>
-                                                    
-                            <div className='icons'>
-                               <AiFillHtml5/>   
-                            </div>
+
+                            {Information[(props.id)-1].icons.map((item) => (
+                                <div className='icons' key={item.id}>
+                                    {item.icon}
+                                </div>
+                            ))}                        
                             
-                            <div className='icons'>
-                                <FaCss3Alt/> 
-                            </div>
-                            
-                            <div className='icons'>
-                                <FaReact/>
-                            </div>
                                
                     </div>
 
@@ -57,6 +57,7 @@ function ModalProject(props) {
                 </div>
             </div>
         </div>
+        
         </>
 
     );
