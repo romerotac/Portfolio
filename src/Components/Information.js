@@ -17,7 +17,7 @@ const Information = [{
     title: 'Personal Portfolio',
     description: 'The Project was made by using ReactJs framework and css.',
     cover:project1ImageCover,
-    demoURL:'https://github.com/romerotac/Portfolio',
+    demoURL:'https://christian-romero-taipe.herokuapp.com',
     codeURL:'https://github.com/romerotac/Portfolio',
     icons:[{
         id:1,
