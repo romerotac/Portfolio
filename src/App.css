@@ -81,9 +81,6 @@ body{
   width: 400px;
 }
 
-.slick-prev:before, .slick-next:before {
-  color: #3A3A42;
-}
 
 .modalProject-body{
   display: flex;
@@ -262,9 +259,18 @@ body{
 
 .nav {
   position: absolute;
-  margin-top: 36vh;
   left: -1000px;
-  transition: .5s;
+  transition: 1s;
+}
+
+.nav .logo-position img{
+  width: 0%;
+}
+
+.menu:hover .nav .logo-position img{
+ 
+  width: 60%;
+  margin-top: 10%;
 }
 
 .nav ul{
@@ -723,7 +729,9 @@ line-height: 3;
 
   .menu:hover .nav{
     left: 10%;
+
   }
+  
 
   .menu:hover{
     
