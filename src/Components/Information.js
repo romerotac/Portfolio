@@ -1,16 +1,24 @@
 import {AiFillHtml5} from 'react-icons/ai';
 import {FaCss3Alt,FaReact} from 'react-icons/fa';
 
+
+/**Project 1 URL */
+let project1ImageCover = require('../Images/project1/1.png');
+let project1Image2 = require('../Images/project1/2.png');
+let project1Image3 = require('../Images/project1/3.png');
+let project1Image4 = require('../Images/project1/4.png');
+
+
 let coverPath = require('../Images/empty_project.jpg')
 let assestPath = require('../Images/empty_project.jpg')
 
 const Information = [{
     id:1,
-    title: 'Project Number 1',
-    description: 'This is the description of the first project',
-    cover:coverPath,
-    demoURL:'null',
-    codeURL:'null',
+    title: 'Personal Portfolio',
+    description: 'The Project was made by using ReactJs framework and css.',
+    cover:project1ImageCover,
+    demoURL:'https://github.com/romerotac/Portfolio',
+    codeURL:'https://github.com/romerotac/Portfolio',
     icons:[{
         id:1,
         icon:<AiFillHtml5/>
@@ -26,19 +34,24 @@ const Information = [{
     ],
     images:[{
         id:1,
-        src: assestPath,
+        src: project1ImageCover,
         alt: "Image1"
         },
         {
         id:2,
-        src: assestPath,
+        src: project1Image2,
         alt: "Image2"
         },
         {
         id:3,
-        src: assestPath,
+        src: project1Image3,
         alt: "Image3"
-        }
+        },
+        {
+        id:4,
+        src: project1Image4,
+        alt: "Image4"
+        },
     ],
 },
 

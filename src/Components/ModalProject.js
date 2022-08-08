@@ -52,8 +52,8 @@ function ModalProject(props) {
 
                 </div>
                 <div className='modalProject-footer'>
-                    <button className='button-code'>Code</button>
-                    <button className='button-demo'>Demo</button>
+                    <button className='button-code' onClick={()=>{window.open(Information[props.id-1].demoURL,'_blank')}}>Code</button>
+                    <button className='button-demo' onClick={()=>{window.open(Information[props.id-1].demoURL,'_blank')}}>Demo</button>
                 </div>
             </div>
         </div>

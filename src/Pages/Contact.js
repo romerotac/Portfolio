@@ -108,7 +108,7 @@ function Contact() {
                 <ul>
                   <a href='https://github.com/romerotac' target={"_blank"}><li><BsGithub className='github'/></li></a>
                   <a href='https://www.linkedin.com/in/christianromerotaipe' target={"_blank"}><li><BsLinkedin className='linkedin'/></li></a>
-                  <a href='/pdfFiles/CV.pdf' target={"_blank"}><li><BsFillFileEarmarkPdfFill className='pdf'/></li></a>
+                  <a href='/pdfFiles/Christian_Romero_Taipe' target={"_blank"}><li><BsFillFileEarmarkPdfFill className='pdf'/></li></a>
                 </ul>
               </div>
 
