@@ -745,16 +745,29 @@ line-height: 3;
   }
   
 
+  .menu:hover {
+    background-image: none;
+    width: 50vw;
+} 
+
+  .menu .nav .logo-position img {
+    width: 0%;
+  }
+  
+  
+  /*
   .menu:hover{
     width: 10px;
     background-image: none;
    
   }
+  */
 
   .menu:hover ~ .container{
     transform: perspective(80vw) rotateY(10deg) translateX(40vw) scaleY(1.2);
-    
   }
+
+
   .nav {
     position: absolute;
     left: -1000px;
