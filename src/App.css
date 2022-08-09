@@ -263,6 +263,11 @@ body{
   transition: 1s;
 }
 
+
+.nav .logo-position {
+  text-align: center;
+}
+
 .nav .logo-position img{
   width: 0%;
 }
@@ -696,15 +701,22 @@ line-height: 3;
 
 @media screen and (max-width:604px) {
 
-  /*
+  
+  .nav .logo-position img{
+    width: 200px;
+  }
+
+  
+
   .menu{
     width: 20vw;
   }
-
+  
   .container{
     margin-left: 20vw;
   }
 
+  /*
   .container .content{
     padding: 100px 15%;
   }
@@ -734,7 +746,7 @@ line-height: 3;
   
 
   .menu:hover{
-    
+    width: 10px;
     background-image: none;
    
   }
