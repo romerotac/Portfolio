@@ -708,6 +708,14 @@ line-height: 3;
 
   
 
+  .modalProject-body .left .modal-image-position {
+    width: 250px;
+  }
+  
+  .modalProject-body .left .modal-image-position .image-carousel{
+    width: inherit;
+  }
+
   .menu{
     width: 20vw;
   }
