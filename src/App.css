@@ -267,18 +267,20 @@ body{
 }
 
 
-.nav .logo-position {
+.logo-position {
   text-align: center;
+  height: auto;
 }
 
-.nav .logo-position img{
+.logo-position img{
   width: 0%;
 }
 
-.menu:hover .nav .logo-position img{
+.menu:hover .logo-position img{
  
   width: 60%;
   margin-top: 10%;
+  height: 18vh;
 }
 
 .nav ul{
