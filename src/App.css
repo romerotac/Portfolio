@@ -241,7 +241,10 @@ body{
 .menu:hover .nav{
   left: 20%;
   height: auto;
+  width: 100%;
+  height: unset;
 }
+
 
 .container{
   width: 90%;
