@@ -282,7 +282,7 @@ body{
   color: white;
   text-transform: uppercase;
   list-style-type: none;
-  height: auto;
+  /*height: auto; */
 }
 
 .nav ul li {
@@ -786,7 +786,7 @@ line-height: 3;
   }
 
   .nav ul{
-    padding: unset;
+    /*padding: unset;*/
   }
 
   .container .content .home-body{
