@@ -240,7 +240,7 @@ body{
 
 .menu:hover .nav{
   left: 20%;
-  height: fit-content;
+  height: auto;
 }
 
 .container{
