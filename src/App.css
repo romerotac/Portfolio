@@ -287,7 +287,6 @@ body{
   color: white;
   text-transform: uppercase;
   list-style-type: none;
-  /*height: auto; */
 }
 
 .nav ul li {
@@ -767,14 +766,6 @@ line-height: 3;
     width: 0%;
   }
   
-  
-  /*
-  .menu:hover{
-    width: 10px;
-    background-image: none;
-   
-  }
-  */
 
   .menu:hover ~ .container{
     transform: perspective(80vw) rotateY(10deg) translateX(40vw) scaleY(1.2);
@@ -788,10 +779,6 @@ line-height: 3;
   }
   .nav ul li {
     letter-spacing: .1em;
-  }
-
-  .nav ul{
-    /*padding: unset;*/
   }
 
   .container .content .home-body{
@@ -888,6 +875,7 @@ line-height: 3;
 
   .menu:hover .nav {
     left: 5%;
+    height: 5vh;
   }
 
   .container .content .contact-body .form-container .social-field li {
