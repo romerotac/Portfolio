@@ -836,6 +836,10 @@ line-height: 3;
 
 @media screen and  (max-width: 1400px) {
 
+  .container{
+    overflow: auto;
+  }
+
   .container .content .projects-body .grid-container .grid-item1 {
     flex: 40%;
   }
