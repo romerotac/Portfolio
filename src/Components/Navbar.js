@@ -6,10 +6,10 @@ function Navbar() {
     return (
         <>
         <div className='menu'>
-            <div className='nav'>
             <div className='logo-position'>   
             <img src={require('../Images/logo.png')}></img>
             </div> 
+            <div className='nav'>
             <ul>
                 <li><Link to = "/"> Home </Link></li>
                 <li><Link to = "/about">About</Link></li>

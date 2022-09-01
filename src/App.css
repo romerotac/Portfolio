@@ -1,10 +1,13 @@
 *{
-  height: -webkit-fill-available;
+  /*
+  height: 100%;
+  */
   margin: 0%;
 }
 body{
   background: #3A3A42;
   box-sizing: content-box;
+  width: -webkit-calc(100% - 0px);
 }
 
 
@@ -194,11 +197,14 @@ body{
   width: 10vw;
   box-shadow: 1px 0 2px rgba(0,0,0,.2);
   transition: 1s;
+  
 }
 .menu:hover{
   width: 40vw;
   background-image: none;
+  /*
   height: inherit;
+  */
 }
 
 .menu:hover ~ .container{
@@ -240,11 +246,14 @@ body{
 
 .menu:hover .nav{
   left: 20%;
-  height: fit-content;
+  height: auto;
+  width: 100%;
+  height: unset;
 }
 
+
 .container{
-  width: 90%;
+  width: auto;
   margin-left: 10vw;
   background-image: url("./Images/Walpaper1.jpg");
   background-repeat: no-repeat;
@@ -254,40 +263,67 @@ body{
   transition: 1s;
   transform-origin: left center;
   color: #D2D2D0;
-  height: inherit;
+  height: 100vh;
 }
 
 .nav {
   position: absolute;
   left: -1000px;
   transition: 1s;
+  
 }
 
-.nav .logo-position img{
+.logo-position{
+  position: absolute;
+  left: -1000px;
+  transition: 1s;
+  
+}
+
+
+.menu:hover .logo-position {
+  left: 22%;
+  top: 3%;
+  height: auto;
+  
+}
+
+.menu .logo-position img{
   width: 0%;
 }
 
-.menu:hover .nav .logo-position img{
- 
-  width: 60%;
+.menu:hover .logo-position img{
+  left: 10%;
+  width: 25vh;
   margin-top: 10%;
+  height: 25vh;
 }
+
+.menu:hover .nav{
+  top: 30%;
+}
+
 
 .nav ul{
   color: white;
   text-transform: uppercase;
   list-style-type: none;
-  height: auto;
 }
 
 .nav ul li {
   line-height: 2em;
   letter-spacing: .3em;
-  padding: 3%;
+  padding: 2vh;
+  display: none;
+}
+.menu:hover .nav ul li{
+  display: block;
 }
 
 .nav ul li a:hover {
   color: #3A3A42;
+  width: 100%;
+  
   transform: 1s;
 }
 
@@ -299,11 +335,14 @@ body{
 }
 
 .container .content{
-  padding: 100px 20%;
+  padding: 18vh 20%;
   position: relative;
-  height: -webkit-fill-available;
-  color: black;
+  /*
+  height: inherit;
   overflow: auto;
+  */
+  color: black;
+  
 }
 
 .container .content .home-body{
@@ -696,15 +735,38 @@ line-height: 3;
 
 @media screen and (max-width:604px) {
 
-  /*
+  
+  .menu:hover .logo-position img{
+    left: 10%;
+    width: 18vh;
+    margin-top: 10%;
+    height: 18vh;
+  }
+
+  .menu:hover .logo-position {
+    left: 16%;
+    top: 10%;
+    height: auto;
+    
+  }
+
+  .modalProject-body .left .modal-image-position {
+    width: 250px;
+  }
+  
+  .modalProject-body .left .modal-image-position .image-carousel{
+    width: inherit;
+  }
+
   .menu{
     width: 20vw;
   }
-
+  
   .container{
     margin-left: 20vw;
   }
 
+  /*
   .container .content{
     padding: 100px 15%;
   }
@@ -728,32 +790,37 @@ line-height: 3;
   }
 
   .menu:hover .nav{
-    left: 10%;
-
+    left: 0%;
   }
   
-
-  .menu:hover{
-    
+  .menu:hover {
     background-image: none;
-   
-  }
+    width: 50vw;
+  } 
+
+
+  
 
   .menu:hover ~ .container{
     transform: perspective(80vw) rotateY(10deg) translateX(40vw) scaleY(1.2);
-    
+    pointer-events: none;
+    touch-action: none;
   }
+
+
+  .menu .logo-position {
+    position: absolute;
+    left: -1000px;
+    transition: 1s;
+  }
+
   .nav {
     position: absolute;
     left: -1000px;
-    transition: .5s;
+    transition: 1s;
   }
   .nav ul li {
     letter-spacing: .1em;
-  }
-
-  .nav ul{
-    padding: unset;
   }
 
   .container .content .home-body{
@@ -768,6 +835,10 @@ line-height: 3;
 }
 
 @media screen and  (max-width: 1400px) {
+
+  .container{
+    overflow: auto;
+  }
 
   .container .content .projects-body .grid-container .grid-item1 {
     flex: 40%;
@@ -849,7 +920,8 @@ line-height: 3;
   }
 
   .menu:hover .nav {
-    left: 5%;
+    left: -3%;
+    height: 5vh;
   }
 
   .container .content .contact-body .form-container .social-field li {
